@@ -1,0 +1,68 @@
+#seitenkopf {
+  font-style: italic;
+  padding: 1em;
+  text-align: center;
+  background: silver;
+  color: crimson;
+  border-color: black;
+  border-style: solid;
+  border-width: 5px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#seitenkopf h1 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 0;
+}
+
+.kw {
+  font-style: italic;
+  font-size: smaller;
+}
+#kalenderblatt td.sa {
+  background-color: rgb(6, 252, 18);
+  color: rgb(15, 41, 32);
+}
+#kalenderblatt td.so {
+  color: rgb(255, 8, 8);
+  background-color: rgb(31, 7, 252);
+}
+#kalenderblatt td {
+  border-bottom: solid black;
+  border-top: solid black;
+  border-left: solid black;
+  border-right: solid black;
+}
+#kalenderblatt {
+  border: solid crimson;
+}
+.moHeute {
+  background-color: darkorange;
+}
+#introtext,
+#historie {
+  padding: 1em;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin: 2px;
+  font-size: 1em;
+  padding: 1em;
+}
+@media (max-width: 600px) {
+  body {
+    background-position: top;
+  }
+}
+body {
+  background-image: url(mhw-behemoth.png);
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 0;
+  background-position: top;
+}
