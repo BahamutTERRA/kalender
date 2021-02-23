@@ -38,12 +38,11 @@ body {
   border-left: solid black;
   border-right: solid black;
 }
-#kalenderblatt {
+table {
   border: solid crimson;
+  margin: 30px auto;
 }
-.moHeute {
-  background-color: darkorange;
-}
+
 #introtext,
 #historie {
   padding: 1em;
@@ -53,16 +52,47 @@ body {
   font-size: 1em;
   padding: 1em;
 }
-@media (max-width: 600px) {
-  body {
-    background-position: top;
-  }
-}
-body {
+
+#div2 {
   background-image: url(mhw-behemoth.png);
   background-repeat: no-repeat;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin: 0;
-  background-position: top;
+  background-size: 500px;
+  background-position: top right;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  margin: 5px;
+  padding: 5px;
+}
+@media only screen and (max-width: 800px) {
+  #div2 {
+    background-position: top left;
+  }
+}
+
+#kalenderblatt table {
+  margin: 20px auto;
+}
+#kalenderblatt table td {
+  width: 50px;
+  text-align: center;
+  padding: 0.5em;
+
+  cursor: pointer;
+}
+#kalenderblatt td:hover {
+  background: darkblue;
+}
+#kalenderblatt td.kw:hover {
+  background: unset;
+}
+#debug {
+  margin: 10px;
+  padding: 10px;
+  grid-column-start: 1;
+  grid-column-end: auto;
+  grid-row-start: 5;
+  grid-row-end: auto;
 }
