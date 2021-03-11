@@ -83,7 +83,10 @@ table {
   cursor: pointer;
 }
 #kalenderblatt td:hover {
-  background: darkblue;
+  background: rgb(113, 139, 0);
+}
+#kalenderblatt td.heute:hover {
+  background: yellow;
 }
 #kalenderblatt td.kw:hover {
   background: unset;
