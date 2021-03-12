@@ -10,6 +10,7 @@ function main() {
     var datTodayGerman = getDateGerman(datToday);
     strDebug += "datTodayGerman: " + datTodayGerman + "<br/>"; // Ausgabe
 
+
     // Wochentag
     var weekday = datToday.getDay(); // ergibt den Tag der Woche als Zahl (von 0 = Sonntag bis 6 = Samstag)
     strDebug += "weekday: " + weekday + "<br/>"; // Ausgabe
@@ -50,6 +51,7 @@ function getDateGerman(date) {
     }
     var dateGerman = day + "." + month + "." + year;
     return dateGerman;
+
 }
 
 function getWeekdayGerman(weekdayIndex) {
