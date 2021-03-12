@@ -12,11 +12,11 @@ function main() {
   // Wochentag
   var weekday = datToday.getDay(); // ergibt den Tag der Woche als Zahl (von 0 = Sonntag bis 6 = Samstag)
   strDebug += "weekday: " + weekday + "<br/>"; // Ausgabe
-  var weekdayGerman = getWeekdayGerman(weekday);
-  strDebug += "weekdayGerman: " + weekdayGerman + "<br/>";
+  var weekdaysGerman = getWeekdaysGerman(weekday);
+  strDebug += "weekdaysGerman: " + weekdaysGerman + "<br/>";
 
   // Monat
-  var month = monthGerman.getMonthGerman();
+  var month = monthGerman.getDatToday();
   strDebug += "month: " + month + "<br/>";
   var monthGerman = getMonthGerma(month);
   strDebug += "monthGerman: " + monthGerman + "<br/>";
@@ -29,12 +29,13 @@ function main() {
     console.log("Debug-Element nicht gefunden.");
   }
   document.getElementById("aktuellesDatum").innerHTML = datTodayGerman;
+  document.getElementById("aktuellesDatum1").innerHTML = datTodayGerman;
 }
 
 function getDateGerman(date) {
   var day = date.getDate();
   var month = date.getMonth();
-  var month = month + ; // Warum auch immer ... Javascript speichert Monate 0-basiert, also 0 = Januar, 11 = Dezember, daher hier Korrektur + 1
+  var month = month + 1; // Warum auch immer ... Javascript speichert Monate 0-basiert, also 0 = Januar, 11 = Dezember, daher hier Korrektur + 1
   var year = date.getFullYear();
   // Man beachte: Man könnte hier nachfolgend nach dem if {} benutzen, aber da es sich nur um EINE nachfolgende Anweisung handelt, geht es auch so
   if (String(day).length == 1) day = "0" + day;
