@@ -1,6 +1,7 @@
 window.onload = function () {
   main();
 };
+
 function main() {
   // Grund-Daten
   var strDebug = "";
@@ -63,6 +64,7 @@ function getWeekdayGerman(weekdayIndex) {
   ];
   return weekdaysGerman[weekdayIndex];
 }
+
 function getWievielter(date) {
   var day = date.getDate();
   if (day <= 7) {
@@ -77,6 +79,7 @@ function getWievielter(date) {
     return "fünfte";
   }
 }
+
 function getMonthGerman(monthIndex) {
   var month = [
     "Januar",
