@@ -16,9 +16,9 @@ function main() {
   strDebug += "weekdayGerman: " + weekdayGerman + "<br/>";
 
   // Monat
-  var month = monthGerman.getMonthGerman();
+  var month = datToday.getMonth();
   strDebug += "month: " + month + "<br/>";
-  var monthGerman = getMonthGerma(month);
+  var monthGerman = getMonthGerman(month);
   strDebug += "monthGerman: " + monthGerman + "<br/>";
 
   // Ausgabe in das elDebug
@@ -29,12 +29,17 @@ function main() {
     console.log("Debug-Element nicht gefunden.");
   }
   document.getElementById("aktuellesDatum").innerHTML = datTodayGerman;
+  document.getElementById("aktuellesDatum1").innerHTML = datTodayGerman;
+  document.getElementById("monthGerman").innerHTML = monthGerman;
+  document.getElementById("weekdaysGerman").innerHTML = weekdayGerman;
+  document.getElementById("weekdaysGerman1").innerHTML = weekdayGerman;
+  document.title = "Kalenderblatt vom " + datTodayGerman;
 }
 
 function getDateGerman(date) {
   var day = date.getDate();
   var month = date.getMonth();
-  var month = month + ; // Warum auch immer ... Javascript speichert Monate 0-basiert, also 0 = Januar, 11 = Dezember, daher hier Korrektur + 1
+  var month = month + 1; // Warum auch immer ... Javascript speichert Monate 0-basiert, also 0 = Januar, 11 = Dezember, daher hier Korrektur + 1
   var year = date.getFullYear();
   // Man beachte: Man könnte hier nachfolgend nach dem if {} benutzen, aber da es sich nur um EINE nachfolgende Anweisung handelt, geht es auch so
   if (String(day).length == 1) day = "0" + day;
@@ -46,7 +51,7 @@ function getDateGerman(date) {
   return dateGerman;
 }
 
-function getWeekdaysGerman(weekdayIndex) {
+function getWeekdayGerman(weekdayIndex) {
   var weekdaysGerman = [
     "Sonntag",
     "Montag",
