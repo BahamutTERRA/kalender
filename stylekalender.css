@@ -82,16 +82,23 @@ table {
 
   cursor: pointer;
 }
-#kalenderblatt td:hover {
+#kalenderblatt td:hover,
+#kalenderblatt th.selectable:hover {
   background: rgb(113, 139, 0);
+  cursor: pointer;
 }
 #kalenderblatt td.heute:hover {
-  background: yellow;
+  background: rgb(252, 41, 41);
 }
 #kalenderblatt td.kw:hover {
-  background: unset;
+  background: purple;
+  cursor: pointer;
+}
+span {
+  background: turquoise;
 }
 #debug {
+  background: tomato;
   margin: 10px;
   padding: 10px;
   grid-column-start: 1;
